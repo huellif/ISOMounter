@@ -2,16 +2,12 @@
 
 #include <AknGlobalNote.h>
 #include <apgcli.h>
-#include <coemain.h>
 #include <apgtask.h>
 #include <akndiscreetpopup.h>
 
 #include <QtGui/QFileDialog.h>
 
 #include "QCenRep.h"
-
-//#include <QDebug>
-
 
 void Helper::CRep4All() const noexcept {
     CAknGlobalNote* note = CAknGlobalNote::NewLC();

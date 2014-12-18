@@ -14,7 +14,6 @@ int main(int argc, char *argv[]) noexcept {
     viewer.setAttribute(Qt::WA_NoSystemBackground);
     viewer.viewport()->setAttribute(Qt::WA_OpaquePaintEvent);
     viewer.viewport()->setAttribute(Qt::WA_NoSystemBackground);
-    viewer.setContextMenuPolicy(Qt::NoContextMenu);
     viewer.setSource(QUrl(QLatin1String("qrc:/qml/main.qml")));
     viewer.showFullScreen();
     return app.exec();

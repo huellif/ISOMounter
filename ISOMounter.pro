@@ -1,7 +1,4 @@
 TARGET = ISOMounter
-SOURCES += main.cpp \
-    QCenRep.cpp \
-    helper.cpp
 
 LIBS += \
     -lavkon \
@@ -27,6 +24,11 @@ QT += declarative
 
 {SOURCES += qml/*.qml}
 
+SOURCES += \
+    src/QCenRep.cpp \
+    src/main.cpp \
+    src/helper.cpp
+
 DEFINES += QT_USE_FAST_CONCATENATION QT_USE_FAST_OPERATOR_PLUS QT_NO_CAST_TO_ASCII
 DEFINES *= QT_USE_QSTRINGBUILDER
 
@@ -47,5 +49,5 @@ MMP_RULES += "OPTION gcce -Wno-unused-parameter"
 MMP_RULES += "OPTION gcce -std=gnu++0x"
 
 HEADERS += \
-    QCenRep.h \
-    helper.h
+    inc/QCenRep.h \
+    inc/helper.h

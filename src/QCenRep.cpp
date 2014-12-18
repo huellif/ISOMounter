@@ -7,8 +7,7 @@ TInt QCenRep::reset(const QString &repo, const QString &key) noexcept {
     CRepository* iRepository = NULL;
     static const TUid repository = TUid::Uid(repo.toUInt(0,16));
     TRAP(err, iRepository = CRepository::NewL(repository));
-    if(!err)
-    {
+    if(!err) {
         err = iRepository->Reset(key.toUInt(0,16));
     }
     delete iRepository;
@@ -20,8 +19,7 @@ TInt QCenRep::ChangeValStr(const TUid &KUidRepository, const TUint32 &key, const
     TBuf<254> tbuf(newkeyvalue.utf16());
     CRepository* iRepository = NULL;
     TRAP(err, iRepository = CRepository::NewL(KUidRepository));
-    if(!err)
-    {
+    if(!err) {
         err = iRepository->Set(key, tbuf);
     }
     delete iRepository;
@@ -33,8 +31,7 @@ TInt QCenRep::ReadValStr(const TUid &KUidRepository, const TUint32 &key, QString
     TBuf<254> val;
     CRepository* iRepository = NULL;
     TRAP(err, iRepository = CRepository::NewL(KUidRepository));
-    if(!err)
-    {
+    if(!err) {
         err = iRepository->Get(key, val);
     }
     delete iRepository;
