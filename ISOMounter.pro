@@ -1,5 +1,7 @@
 TARGET = ISOMounter
 
+ICON += ISOMounter.svg
+
 LIBS += \
     -lavkon \
     -lapgrfx \
